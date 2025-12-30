@@ -1,4 +1,4 @@
-# libredwg
+# libredwg-ts
 
 基于 LibreDWG WebAssembly 的 TypeScript DWG/DXF 解析库。
 
@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-npm install libredwg
+npm install libredwg-ts
 ```
 
 ## 使用方法
@@ -21,7 +21,7 @@ npm install libredwg
 ### 基本用法
 
 ```javascript
-import { LibreDwg, Dwg_File_Type } from 'libredwg'
+import { LibreDwg, Dwg_File_Type } from 'libredwg-ts'
 import { readFile } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -30,7 +30,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 async function readDwg() {
   // 指定 WASM 文件路径
-  const wasmPath = join(__dirname, 'node_modules/libredwg/dist/wasm')
+  const wasmPath = join(__dirname, 'node_modules/libredwg-ts/dist/wasm')
 
   // 创建 LibreDwg 实例
   const dwg = await LibreDwg.create(wasmPath)
@@ -73,7 +73,7 @@ readDwg()
 ### 转换为 SVG
 
 ```javascript
-import { LibreDwg, Dwg_File_Type } from 'libredwg'
+import { LibreDwg, Dwg_File_Type } from 'libredwg-ts'
 
 async function convertToSvg(dwgBuffer) {
   const dwg = await LibreDwg.create(wasmPath)
@@ -91,7 +91,7 @@ async function convertToSvg(dwgBuffer) {
 ### 获取缩略图
 
 ```javascript
-import { LibreDwg, Dwg_File_Type } from 'libredwg'
+import { LibreDwg, Dwg_File_Type } from 'libredwg-ts'
 
 async function getThumbnail(dwgBuffer) {
   const dwg = await LibreDwg.create(wasmPath)

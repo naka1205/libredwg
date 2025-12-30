@@ -1,6 +1,6 @@
 {
-  "name": "libredwg",
-  "version": "1.0.0",
+  "name": "libredwg-ts",
+  "version": "1.0.1",
   "description": "A TypeScript library for parsing AutoCAD DWG files and converting them to SVG, powered by LibreDWG WebAssembly",
   "type": "module",
   "main": "./index.cjs",
